@@ -1,6 +1,4 @@
-import {Photo} from '../models/photo';
-
-export function getSimilarity(tags1: string[], tags2: string[]): number {
+export function getInterestFactor(tags1: string[], tags2: string[]): number {
     const intersection = getIntersectionSet(tags1, tags2);
 
     const tags1Only = tags1.filter((tag1) => !intersection.has(tag1));
